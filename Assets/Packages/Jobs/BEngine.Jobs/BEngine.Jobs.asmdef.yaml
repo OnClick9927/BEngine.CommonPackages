@@ -1,0 +1,13 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.Jobs
+rootNamespace: BEngine.Jobs
+references:
+- BEngine.Platform.Contracts
+- BEngine.Core
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false
+allowUnsafeCode: true

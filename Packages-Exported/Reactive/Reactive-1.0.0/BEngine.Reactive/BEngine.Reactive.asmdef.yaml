@@ -1,0 +1,12 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.Reactive
+rootNamespace: BEngine.Reactive
+references:
+- BEngine.Platform.Contracts
+- BEngine.Core
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false

@@ -1,0 +1,60 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.sprite-skinning2d
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Sprite Skinning 2D
+description: 2D bone authoring, CPU/GPU weighted meshes, FFD, constrained chain IK, transform constraints, reference-pose retargeting and attachment swapping.
+enabledByDefault: true
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.SpriteSkinning2D
+  rootNamespace: BEngine
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  packageReferences: []
+editor:
+  assembly: BEngine.SpriteSkinning2D.Editor
+  rootNamespace: BEngine.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  - packageId: com.bengine.rendering2d
+    target: editor
+    optional: false
+  - packageId: com.bengine.sprite-skinning2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.graphics
+    target: editor
+    optional: false
+  packageReferences: []

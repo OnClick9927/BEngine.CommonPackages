@@ -1,0 +1,20 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.Timeline.Editor
+rootNamespace: BEngine.Editor
+references:
+- BEngine.UIElements
+- BEngine.Animation
+- BEngine.IMGUI.Editor
+- BEngine.Timeline
+- BEngine.Platform.Contracts
+- BEngine.Core.Editor
+- BEngine.UIElements.Editor
+- BEngine.TrackEditor.Editor
+- BEngine.Rendering2D.Editor
+- BEngine.Rendering2D
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: true

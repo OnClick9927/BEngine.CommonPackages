@@ -1,0 +1,17 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.PostProcessing.Editor
+rootNamespace: BEngine.PostProcessing.Editor
+references:
+- BEngine.Graphics
+- BEngine.IMGUI.Editor
+- BEngine.Platform.Contracts
+- BEngine.Core.Editor
+- BEngine.PostProcessing
+- BEngine.Rendering2D.Editor
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: true
+allowUnsafeCode: false

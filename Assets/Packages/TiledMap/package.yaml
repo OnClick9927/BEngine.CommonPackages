@@ -1,0 +1,57 @@
+format: BEngine.Package
+version: 2
+type: package
+id: com.bengine.tiledmap
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+displayName: Tiled Map
+description: >-
+  2D tile palettes, atlas regions and tilemaps with runtime painting, camera culling, sorting, pixel snapping, collision generation and hot-update-aware texture caching.
+  Create palettes from texture atlases, paint and erase tiles in the editor or at runtime, and render large maps with camera culling. Includes TilemapCollider2D integration with Physics2D, palette and tilemap editors, painting examples and resource-loading documentation.
+enabledByDefault: false
+replaces:
+- com.bengine.tilemap-physics2d
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+  - packageId: com.bengine.graphics
+    target: runtime
+  - packageId: com.bengine.physics2d
+    target: runtime
+  - packageId: com.bengine.texture-atlas
+    target: runtime
+  assembly: BEngine.TiledMap
+  aliases:
+  - BEngine.TilemapPhysics2D
+  rootNamespace: BEngine.TiledMap
+  packageReferences:
+  - id: YamlDotNet
+    version: 18.1.0
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+editor:
+  assembly: BEngine.TiledMap.Editor
+  rootNamespace: BEngine.TiledMap.Editor
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+  - packageId: com.bengine.imgui
+    target: editor
+  - packageId: com.bengine.graphics
+    target: runtime
+  - packageId: com.bengine.rendering2d
+    target: editor
+  - packageId: com.bengine.physics2d
+    target: runtime
+  - packageId: com.bengine.tiledmap
+    target: runtime
+  - packageId: com.bengine.texture-atlas
+    target: runtime
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts

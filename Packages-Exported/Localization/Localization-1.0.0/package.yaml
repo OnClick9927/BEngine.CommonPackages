@@ -1,0 +1,44 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.localization
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Localization
+description: Language tables, lazy language loading, formatted text, localized assets and property bindings, CSV exchange and key generation. Inspired by WooLocalization.
+enabledByDefault: false
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.Localization
+  rootNamespace: BEngine.Localization
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies: []
+  packageReferences:
+  - id: YamlDotNet
+    version: 18.1.0
+editor:
+  assembly: BEngine.Localization.Editor
+  rootNamespace: BEngine.Localization.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.localization
+    target: runtime
+    optional: false
+  packageReferences: []

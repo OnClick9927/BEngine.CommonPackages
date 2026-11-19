@@ -1,0 +1,51 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.visual-scripting
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Visual Scripting
+description: Event-driven visual gameplay graphs with variables, conditions, actions and live debugging.
+enabledByDefault: true
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.VisualScripting
+  rootNamespace: BEngine.VisualScripting
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies: []
+  packageReferences: []
+editor:
+  assembly: BEngine.VisualScripting.Editor
+  rootNamespace: BEngine.VisualScripting.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.visual-scripting
+    target: runtime
+    optional: false
+  - packageId: com.bengine.ui-elements
+    target: editor
+    optional: false
+  - packageId: com.bengine.node-editor
+    target: editor
+    optional: false
+  - packageId: com.bengine.ui-elements
+    target: runtime
+    optional: false
+  packageReferences: []

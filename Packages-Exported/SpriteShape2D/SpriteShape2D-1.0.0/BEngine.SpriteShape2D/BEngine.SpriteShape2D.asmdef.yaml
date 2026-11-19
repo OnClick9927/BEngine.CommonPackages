@@ -1,0 +1,16 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.SpriteShape2D
+rootNamespace: BEngine
+references:
+- BEngine.Graphics
+- BEngine.Platform.Contracts
+- BEngine.Physics2D
+- BEngine.Rendering2D
+- BEngine.Core
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false
+allowUnsafeCode: false

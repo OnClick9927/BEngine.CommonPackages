@@ -1,0 +1,14 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.ShaderGraph
+rootNamespace: BEngine.ShaderGraph
+references:
+- BEngine.Graphics
+- BEngine.Core
+- BEngine.Rendering2D
+- BEngine.Platform.Contracts
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false

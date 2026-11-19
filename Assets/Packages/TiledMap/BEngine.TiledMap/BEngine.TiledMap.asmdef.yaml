@@ -1,0 +1,17 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.TiledMap
+rootNamespace: BEngine.TiledMap
+references:
+- BEngine.Graphics
+- BEngine.Physics2D
+- BEngine.TextureAtlas
+- BEngine.Rendering2D
+- BEngine.Core
+- BEngine.Platform.Contracts
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false
+allowUnsafeCode: false

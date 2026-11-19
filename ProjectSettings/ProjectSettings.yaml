@@ -1,0 +1,45 @@
+format: BEngine.ProjectSettings
+version: 3
+locale: zh-CN
+companyName: DefaultCompany
+productName: CommonPackages
+defaultScreenWidth: 1280
+defaultScreenHeight: 720
+fullScreen: false
+runInBackground: false
+graphicsBackend: Auto
+scriptingDefineSymbols: []
+tags:
+- Untagged
+- Respawn
+- Finish
+- EditorOnly
+- MainCamera
+- Player
+- GameController
+sortingLayers:
+- value: 1
+  name: Default
+  builtIn: true
+  isUi: false
+  builtInId: Default
+- value: 2
+  name: TransparentFX
+  builtIn: true
+  isUi: false
+  builtInId: TransparentFX
+- value: 3
+  name: Ignore Raycast
+  builtIn: true
+  isUi: false
+  builtInId: IgnoreRaycast
+- value: 4
+  name: Water
+  builtIn: true
+  isUi: false
+  builtInId: Water
+- value: 5
+  name: UI
+  builtIn: true
+  isUi: true
+  builtInId: UI

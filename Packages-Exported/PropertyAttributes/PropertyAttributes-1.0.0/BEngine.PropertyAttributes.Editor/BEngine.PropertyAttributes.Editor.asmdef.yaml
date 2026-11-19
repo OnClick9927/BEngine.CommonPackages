@@ -1,0 +1,14 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.PropertyAttributes.Editor
+rootNamespace: BEngine.Editor
+references:
+- BEngine.IMGUI.Editor
+- BEngine.Platform.Contracts
+- BEngine.PropertyAttributes
+- BEngine.Core.Editor
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: true

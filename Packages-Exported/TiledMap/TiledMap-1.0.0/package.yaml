@@ -1,0 +1,73 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.tiledmap
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Tiled Map
+description: 2D tile palettes, atlas regions and tilemaps with runtime painting, camera culling, sorting, pixel snapping, collision generation and hot-update-aware texture caching. Create palettes from texture atlases, paint and erase tiles in the editor or at runtime, and render large maps with camera culling. Includes TilemapCollider2D integration with Physics2D, palette and tilemap editors, painting examples and resource-loading documentation.
+enabledByDefault: false
+required: false
+replaces:
+- com.bengine.tilemap-physics2d
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.TiledMap
+  rootNamespace: BEngine.TiledMap
+  bootstrap: false
+  aliases:
+  - BEngine.TilemapPhysics2D
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  - packageId: com.bengine.physics2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.texture-atlas
+    target: runtime
+    optional: false
+  packageReferences:
+  - id: YamlDotNet
+    version: 18.1.0
+editor:
+  assembly: BEngine.TiledMap.Editor
+  rootNamespace: BEngine.TiledMap.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  - packageId: com.bengine.rendering2d
+    target: editor
+    optional: false
+  - packageId: com.bengine.physics2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.tiledmap
+    target: runtime
+    optional: false
+  - packageId: com.bengine.texture-atlas
+    target: runtime
+    optional: false
+  packageReferences: []

@@ -1,0 +1,13 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.Testing
+rootNamespace: BEngine.Testing
+references:
+- BEngine.Platform.Contracts
+- BEngine.Networking
+- BEngine.Core
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false

@@ -1,0 +1,20 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.SpriteShape2D.Editor
+rootNamespace: BEngine.Editor
+references:
+- BEngine.Graphics
+- BEngine.IMGUI.Editor
+- BEngine.Platform.Contracts
+- BEngine.Physics2D
+- BEngine.Core.Editor
+- BEngine.Rendering2D.Editor
+- BEngine.SpriteShape2D
+- BEngine.Rendering2D
+includePlatforms:
+- Editor
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: true
+allowUnsafeCode: false

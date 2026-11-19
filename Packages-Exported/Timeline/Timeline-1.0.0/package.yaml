@@ -1,0 +1,77 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.timeline
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Timeline
+description: Timeline assets, playback, media sequencing and track authoring.
+enabledByDefault: true
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.Timeline
+  rootNamespace: BEngine
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.video
+    target: runtime
+    optional: false
+  - packageId: com.bengine.audio
+    target: runtime
+    optional: false
+  - packageId: com.bengine.animation
+    target: runtime
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  packageReferences:
+  - id: YamlDotNet
+    version: 18.1.0
+editor:
+  assembly: BEngine.Timeline.Editor
+  rootNamespace: BEngine.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.rendering2d
+    target: editor
+    optional: false
+  - packageId: com.bengine.ui-elements
+    target: editor
+    optional: false
+  - packageId: com.bengine.track-editor
+    target: editor
+    optional: false
+  - packageId: com.bengine.timeline
+    target: runtime
+    optional: false
+  - packageId: com.bengine.animation
+    target: runtime
+    optional: false
+  - packageId: com.bengine.ui-elements
+    target: runtime
+    optional: false
+  packageReferences: []

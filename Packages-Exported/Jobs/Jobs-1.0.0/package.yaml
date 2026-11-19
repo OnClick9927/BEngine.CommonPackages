@@ -1,0 +1,26 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.jobs
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Jobs
+description: Dependency-aware worker jobs, parallel-for scheduling and safety-checked native containers.
+enabledByDefault: true
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.Jobs
+  rootNamespace: BEngine.Jobs
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies: []
+  packageReferences: []

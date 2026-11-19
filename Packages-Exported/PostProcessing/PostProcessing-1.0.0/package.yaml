@@ -1,0 +1,54 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.postprocessing
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Post Processing
+description: Camera post-processing with Fix64 profile blending, global or circular local volumes, layer filtering, color adjustment, bloom and vignette on RHI render targets. Create reusable effect profiles and blend them through global or local volumes. Apply color adjustments, bloom and vignette to Camera2D render targets, with layer filtering and configurable weights. Includes profile/volume inspectors, example scenes and runtime documentation.
+enabledByDefault: false
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.PostProcessing
+  rootNamespace: BEngine.PostProcessing
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  packageReferences: []
+editor:
+  assembly: BEngine.PostProcessing.Editor
+  rootNamespace: BEngine.PostProcessing.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.graphics
+    target: runtime
+    optional: false
+  - packageId: com.bengine.rendering2d
+    target: editor
+    optional: false
+  - packageId: com.bengine.postprocessing
+    target: runtime
+    optional: false
+  packageReferences: []

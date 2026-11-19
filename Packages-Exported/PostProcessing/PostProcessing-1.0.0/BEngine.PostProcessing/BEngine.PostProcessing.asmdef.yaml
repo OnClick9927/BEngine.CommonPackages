@@ -1,0 +1,15 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.PostProcessing
+rootNamespace: BEngine.PostProcessing
+references:
+- BEngine.Graphics
+- BEngine.Rendering2D
+- BEngine.Core
+- BEngine.Platform.Contracts
+includePlatforms: []
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: false
+allowUnsafeCode: false

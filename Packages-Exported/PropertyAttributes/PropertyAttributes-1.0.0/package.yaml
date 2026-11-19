@@ -1,0 +1,42 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.property-attributes
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: PropertyAttributes
+description: Extended inspector attributes and property drawers.
+enabledByDefault: true
+required: false
+replaces: []
+commandLineOptions: []
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.PropertyAttributes
+  rootNamespace: BEngine
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies: []
+  packageReferences: []
+editor:
+  assembly: BEngine.PropertyAttributes.Editor
+  rootNamespace: BEngine.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.property-attributes
+    target: runtime
+    optional: false
+  packageReferences: []

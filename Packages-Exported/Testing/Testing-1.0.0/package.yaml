@@ -1,0 +1,50 @@
+format: BEngine.Package
+version: 2
+id: com.bengine.testing
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+type: package
+projectDirectory: ""
+displayName: Test Framework
+description: Edit, Play and packaged Player tests with source navigation and opt-in statement coverage.
+enabledByDefault: true
+required: false
+replaces: []
+commandLineOptions:
+- --run-tests
+- --instrument-coverage
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.Testing
+  rootNamespace: BEngine.Testing
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.networking
+    target: runtime
+    optional: false
+  packageReferences: []
+editor:
+  assembly: BEngine.Testing.Editor
+  rootNamespace: BEngine.Testing.Editor
+  bootstrap: false
+  aliases: []
+  hostReferences:
+  - BEngine.Core.Editor
+  - Mono.Cecil
+  - BEngine.Platform.Contracts
+  dependencies:
+  - packageId: com.bengine.imgui
+    target: editor
+    optional: false
+  - packageId: com.bengine.testing
+    target: runtime
+    optional: false
+  packageReferences:
+  - id: Microsoft.CodeAnalysis.CSharp
+    version: 5.9.0

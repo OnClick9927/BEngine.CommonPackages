@@ -1,0 +1,16 @@
+format: BEngine.AssemblyDefinition
+version: 1
+name: BEngine.Testing.Editor
+rootNamespace: BEngine.Testing.Editor
+references:
+- BEngine.IMGUI.Editor
+- BEngine.Platform.Contracts
+- BEngine.Testing
+- BEngine.Core.Editor
+- Mono.Cecil
+includePlatforms:
+- Editor
+excludePlatforms: []
+defineConstraints: []
+autoReferenced: true
+editorOnly: true

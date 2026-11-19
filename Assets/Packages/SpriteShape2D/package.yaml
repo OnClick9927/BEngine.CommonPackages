@@ -1,0 +1,44 @@
+format: BEngine.Package
+version: 2
+type: package
+id: com.bengine.sprite-shape2d
+packageVersion: 1.0.0
+minimumEngineVersion: 0.1.0
+displayName: Sprite Shape 2D
+description: Editable Bezier sprite shapes with adaptive tessellation, repeated edges, holed closed fills and synchronized 2D colliders.
+enabledByDefault: true
+content:
+  runtime: Resources
+  editor: Editor
+runtime:
+  assembly: BEngine.SpriteShape2D
+  rootNamespace: BEngine
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+  - packageId: com.bengine.graphics
+    target: runtime
+  - packageId: com.bengine.physics2d
+    target: runtime
+  hostReferences:
+  - BEngine.Core
+  - BEngine.Platform.Contracts
+editor:
+  assembly: BEngine.SpriteShape2D.Editor
+  rootNamespace: BEngine.Editor
+  dependencies:
+  - packageId: com.bengine.rendering2d
+    target: runtime
+  - packageId: com.bengine.imgui
+    target: editor
+  - packageId: com.bengine.graphics
+    target: runtime
+  - packageId: com.bengine.rendering2d
+    target: editor
+  - packageId: com.bengine.sprite-shape2d
+    target: runtime
+  - packageId: com.bengine.physics2d
+    target: runtime
+  hostReferences:
+  - BEngine.Core.Editor
+  - BEngine.Platform.Contracts
